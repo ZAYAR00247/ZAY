@@ -112,6 +112,7 @@ a:hover{
     margin: 0;
     line-height: 1em;
     overflow: hidden;
+    opacity: 0;
 }
 
 .item02{
@@ -121,6 +122,7 @@ a:hover{
     margin: 0;
     line-height: 1em;
     overflow: hidden;
+    opacity: 0;
 }
 
 .item01 img, .item02 img{
@@ -133,7 +135,19 @@ a:hover{
     height: 6em;
     overflow: hidden;
 }
-
+.fade-in{
+    animation: fadein 1.5s ease-out forwards;
+}
+@keyframes fadein{
+0%{
+    opacity: 0;
+    transform: translateY(20px);
+}
+100%{
+    opacity: 1;
+    transform: translateY(0px);
+}
+}
 /*****************************/
 /* フッター                   */
 /*****************************/
@@ -157,4 +171,20 @@ footer> p {
     body{
         background-size: auto 1000px;
     }
+}
+/* fukada add-end */
+/*******************************************************/
+/* class=back                                         */
+/* id=btn99 backボタン                                 */
+/*******************************************************/
+.back{
+    text-align: left;
+}
+#btn99{
+padding: 0.5em;
+border-radius: 0.3em;
+color: whitesmoke;
+font-size: 1.5em;
+background: rgb(26, 212, 212);
+cursor: pointer; /*カーソルをポインターの形（かたち）にする*/
 }
